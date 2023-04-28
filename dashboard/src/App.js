@@ -4,7 +4,7 @@ import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
 import {Navbar, Footer, Sidebar, ThemeSettings} from './components';
-import { Employees, Kanban, Editor, Calender, ColorPicker, Line, Bar, Pie, ColorMapping, Area} from './pages';
+import { Employees, Kanban, Editor, Calendar, ColorPicker, Line, Bar, Pie, ColorMapping, Area, Home} from './pages';
 import './App.css';
 
 const App = () => {
@@ -28,12 +28,12 @@ const App = () => {
                         <div className="w-72 fixed sidebar
                         dark:bg-secondary-dark-bg
                         bg-white">
-                            Sidebar
+                            <Sidebar/>
                         </div>
                     ) : (
                         <div className="w-0
                         dark:bg-secondary-dark-bg">
-                           Sidebar
+                           <Sidebar/>
                         </div>
                     )}
                     <div className={
@@ -42,34 +42,34 @@ const App = () => {
                         <div className="fixed md:static
                         bg-main-bg dark:bg-main-dark-bg
                         navbar w-full">
-                            Navbar
+                            <Navbar/>
                         </div>
                     </div>
                     <div>
                         {/* Dashboard */}
                         <Routes>
-                            <Route path="/" element="Home"/>
-                            <Route path="/Home" element="Home"/>
+                            <Route path="/" element={<Home/>}/>
+                            <Route path="/home" element={<Home/>}/>
                         
 
                             {/* Pages */}
-                            <Route path="/salary" element="Salary"/>
-                            <Route path="/employees" element="Employee"/>
+                           
+                            <Route path="/employees" element={<Employees/>}/>
 
                             {/* Apps */}
-                            <Route path="/kanban" element="Kanban"/>
-                            <Route path="/editor" element="Editor"/>
-                            <Route path="/calender" element="Calender"/>
-                            <Route path="/color-picker" element="ColorPicker"/>
+                            <Route path="/kanban" element={<Kanban/>}/>
+                            <Route path="/editor" element={<Editor/>}/>
+                            <Route path="/calender" element={<Calendar/>}/>
+                            <Route path="/color-picker" element={<ColorPicker/>}/>
 
                             {/* Charts */}
-                            <Route path="/line" element="Line"/>
-                            <Route path="/bar" element="Bar"/>
-                            <Route path="/pie" element="Pie"/>
+                            <Route path="/line" element={<Line/>}/>
+                            <Route path="/bar" element={<Bar/>}/>
+                            <Route path="/pie" element={<Pie/>}/>
 
 
                             {/* Tables */}
-                            <Route path="/basic-table" element="BasicTable"/>
+                            
                         </Routes>
 
                     </div>
