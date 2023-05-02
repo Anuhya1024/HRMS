@@ -46,7 +46,7 @@ const App = () => {
                         navbar w-full">
                             <Navbar/>
                         </div>
-                    </div>
+                   
                     <div>
                         {/* Dashboard */}
                         <Routes>
@@ -73,7 +73,7 @@ const App = () => {
                             {/* Tables */}
                             
                         </Routes>
-
+                    </div>
                     </div>
             </div>
         </BrowserRouter>
