@@ -12,7 +12,7 @@ const Home = () => {
       <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl w-full lg:w-80 p-8 pt-9 m-3 bg-hero-pattern bg-no-repeat bg-cover bg-center">
         <div className="flex justify-between items-center">
           <div>
-            <p className="font-bold text-gray-400">Earnings</p>
+            <p className="font-bold text-gray-400">Salaries</p>
             <p className="text-2xl">$63,448.78</p>
           </div>
           <button
@@ -91,7 +91,7 @@ const Home = () => {
             </div>
 
             <div className="mt-5">
-              <SparkLine currentColor='blue' id="line-sparkLine" type="Line" height="80px" width="250px" data={SparklineAreaData} color='blue' > {console.log(SparklineAreaData)}</SparkLine>
+              <SparkLine currentColor='blue' id="line-sparkLine" type="Line" height="80px" width="250px" data={SparklineAreaData} color='blue' ></SparkLine>
             </div>
             <div className="mt-10">
               <Button
@@ -103,7 +103,7 @@ const Home = () => {
             </div>
           </div>
           <div>
-            {/* <Stacked currentMode={currentMode} width="320px" height="360px" /> */}
+            <Stacked width="320px" height="360px" />
           </div>
         </div>
       </div>
