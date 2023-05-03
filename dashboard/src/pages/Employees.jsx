@@ -1,5 +1,5 @@
 import React from 'react';
-import { GridComponent, Inject, ColumnsDirective, ColumnDirective, Search, Page, Toolbar } from '@syncfusion/ej2-react-grids';
+import { GridComponent, Inject, ColumnsDirective, ColumnDirective, Search, Page, Toolbar,  } from '@syncfusion/ej2-react-grids';
 
 import { employeesData, employeesGrid } from '../data/dummy';
 import { Header } from '../components';
@@ -18,8 +18,8 @@ const Employees = () => {
         allowPaging
         allowSorting
         pageSettings={{ pageCount: 5 }}
-        
-        toolbar={['Search']}
+        editSettings={{ allowEditing: true, allowDeleting: true, allowAdding: true, mode: 'Dialog' }}
+        toolbar={['Search', 'Add', 'Edit', 'Delete', 'Update', 'Cancel']}
       >
         <ColumnsDirective>
           {/* eslint-disable-next-line react/jsx-props-no-spreading */}

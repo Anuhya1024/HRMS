@@ -1,5 +1,5 @@
 import React from 'react';
-import { GridComponent, ColumnsDirective, ColumnDirective, Resize, Sort, ContextMenu, Filter, Page, ExcelExport, PdfExport, Edit, Inject } from '@syncfusion/ej2-react-grids';
+import { GridComponent, ColumnsDirective, ColumnDirective, Resize, Sort, ContextMenu, Filter, Page, ExcelExport, PdfExport, Edit, Inject, Selection, } from '@syncfusion/ej2-react-grids';
 import { leavesData, contextMenuItems, leavesGrid } from '../data/dummy';
 import { Header } from '../components';
 
@@ -16,6 +16,8 @@ const Leaves = () => {
         allowExcelExport
         allowPdfExport
         contextMenuItems={contextMenuItems}
+        editSettings={{allowEditing: true, allowDeleting: true, allowAdding: true, mode: 'Dialog'}}
+        toolbar= {['Add', 'Edit', 'Delete', 'Update', 'Cancel']}
         
       >
         <ColumnsDirective>
