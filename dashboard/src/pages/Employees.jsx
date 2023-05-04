@@ -7,7 +7,17 @@ import { Header } from '../components';
 const Employees = () => {
   
 
-  const editing = { allowDeleting: true, allowEditing: true };
+  let editing = {};
+  let toolbaroptions = [];
+  
+  if (localStorage.getItem('currentScope') === 'admin' || localStorage.getItem('currentScope') === 'exec') {
+    toolbaroptions = ['Search', 'Add', 'Edit', 'Delete', 'Update', 'Cancel'];
+    editing = { allowEditing: true, allowDeleting: true, allowAdding: true, mode: 'Normal' };
+  } else {
+    toolbaroptions = ['Search'];
+    editing = { allowDeleting: false, allowEditing: false };
+  }
+  
 
   return (
     <div className="m-2 md:m-10 mt-24 p-2 md:p-10 bg-white rounded-3xl">
@@ -18,8 +28,8 @@ const Employees = () => {
         allowPaging
         allowSorting
         pageSettings={{ pageCount: 5 }}
-        editSettings={{ allowEditing: true, allowDeleting: true, allowAdding: true, mode: 'Dialog' }}
-        toolbar={['Search', 'Add', 'Edit', 'Delete', 'Update', 'Cancel']}
+        editSettings={editing}
+        toolbar={toolbaroptions}
       >
         <ColumnsDirective>
           {/* eslint-disable-next-line react/jsx-props-no-spreading */}
