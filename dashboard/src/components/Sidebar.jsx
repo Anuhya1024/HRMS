@@ -4,7 +4,7 @@ import { SiShopware } from 'react-icons/si';
 import { MdOutlineCancel } from 'react-icons/md';
 
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
-import { links, linkEmployee } from '../data/dummy';
+import { links, linkEmployee, linksExec, linkIntern } from '../data/dummy';
 import { useStateContext } from '../contexts/ContextProvider';
 
 
@@ -41,7 +41,45 @@ const Sidebar = () => {
             </TooltipComponent>
           </div>
           <div className="mt-10 ">
-            {localStorage.getItem('currentScope') === 'admin' && links.map((item) => (
+            {localStorage.getItem('currentScope') === 'admin'  && links.map((item) => (
+              <div key={item.title}>
+                <p className="text-gray-400 dark:text-gray-400 m-3 mt-4 uppercase">
+                  {item.title}
+                </p>
+              {item.links.map((link) => (
+                  <NavLink
+                    to={`/${link.name}`}
+                    key={link.name}
+                    onClick={handleCloseSidebar}
+                    className={({ isActive }) => (isActive ? activeLink : normalLink)}
+                  >
+                    {link.icon}
+                    <span className="capitalize ">{link.name}</span>
+                  </NavLink>
+                ))
+              }
+            </div>
+          ))}
+          {localStorage.getItem('currentScope') === 'exec' && linksExec.map((item) => (
+              <div key={item.title}>
+                <p className="text-gray-400 dark:text-gray-400 m-3 mt-4 uppercase">
+                  {item.title}
+                </p>
+              {item.links.map((link) => (
+                  <NavLink
+                    to={`/${link.name}`}
+                    key={link.name}
+                    onClick={handleCloseSidebar}
+                    className={({ isActive }) => (isActive ? activeLink : normalLink)}
+                  >
+                    {link.icon}
+                    <span className="capitalize ">{link.name}</span>
+                  </NavLink>
+                ))
+              }
+            </div>
+          ))}
+          {localStorage.getItem('currentScope') === 'intern' && linkIntern.map((item) => (
               <div key={item.title}>
                 <p className="text-gray-400 dark:text-gray-400 m-3 mt-4 uppercase">
                   {item.title}
@@ -79,6 +117,7 @@ const Sidebar = () => {
               }
             </div>
           ))}
+          
 
         </div>
       </>)}

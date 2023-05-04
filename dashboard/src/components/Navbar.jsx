@@ -54,7 +54,7 @@ useEffect(() => {
         <NavButton title="Notifications" 
           customFunc={() => handleClick('notification')} 
           color="#03C9D7" icon={<RiNotification3Line/>}/>
-          <TooltipComponent content="Profile" position="BottomCenter">
+          {/* <TooltipComponent content="Profile" position="BottomCenter">
             <div className='flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg' 
             onClick={() => handleClick('userProfile')}>
               <img
@@ -66,7 +66,7 @@ useEffect(() => {
               </p>
               <MdKeyboardArrowDown className='text-gray-400 text-14'/>
             </div>
-          </TooltipComponent>
+          </TooltipComponent> */}
           {isClicked.notification && <Notification/>}
           {isClicked.userProfile && <UserProfile/>}
       </div>

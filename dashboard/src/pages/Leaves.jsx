@@ -16,7 +16,7 @@ const Leaves = () => {
         allowExcelExport
         allowPdfExport
         contextMenuItems={contextMenuItems}
-        editSettings={{allowEditing: true, allowDeleting: true, allowAdding: true, mode: 'Dialog'}}
+        editSettings={{allowEditing: true, allowDeleting: true, allowAdding: true, mode: 'Normal'}}
         toolbar= {['Add', 'Edit', 'Delete', 'Update', 'Cancel']}
         
       >

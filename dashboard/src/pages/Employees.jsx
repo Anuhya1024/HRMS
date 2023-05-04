@@ -10,13 +10,17 @@ const Employees = () => {
   let editing = {};
   let toolbaroptions = [];
   
-  if (localStorage.getItem('currentScope') === 'admin' || localStorage.getItem('currentScope') === 'exec') {
+  if (localStorage.getItem('currentScope') === 'admin' ) {
+    toolbaroptions = ['Search', 'Edit', 'Update', 'Cancel'];
+    editing = { allowEditing: true, mode: 'Normal' };
+  } else if(localStorage.getItem('currentScope') === 'exec') {
     toolbaroptions = ['Search', 'Add', 'Edit', 'Delete', 'Update', 'Cancel'];
-    editing = { allowEditing: true, allowDeleting: true, allowAdding: true, mode: 'Normal' };
-  } else {
+    editing = { allowEditing: true, allowDeleting: true, allowAdding: true, mode: 'Normal'  };
+  }else{
     toolbaroptions = ['Search'];
     editing = { allowDeleting: false, allowEditing: false };
   }
+
   
 
   return (

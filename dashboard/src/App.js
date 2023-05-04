@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
-import {Navbar, Footer, Sidebar, ThemeSettings, Login} from './components';
+import {Navbar, Footer, Sidebar, ThemeSettings, Login, UserProfile} from './components';
 import { Employees, Kanban, Editor, Calendar, ColorPicker, Line, Bar, Pie, ColorMapping, Area, Home, Leaves} from './pages';
 import { useStateContext } from './contexts/ContextProvider';
 import './App.css';
@@ -59,6 +59,7 @@ const App = () => {
                             <Route path="/leaves" element={<Leaves/>}/>
                             <Route path="/employees" element={<Employees/>}/>
                             <Route path="/projects" element={<AssignProjects/>}/>
+                            <Route path="profile" element={<UserProfile/>}/>
 
                             {/* Apps */}
                             <Route path="/kanban" element={<Kanban/>}/>

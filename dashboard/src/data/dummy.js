@@ -508,14 +508,71 @@ export const links = [
         name: 'calendar',
         icon: <AiOutlineCalendar />,
       },
+      
+     
+    ],
+  },
+  
+];
+export const linksExec = [
+  {
+    title: 'Dashboard',
+    links: [
       {
-        name: 'kanban',
-        icon: <BsKanban />,
+        name: 'home',
+        icon: <FiShoppingBag />,
       },
+    ],
+  },
+
+  {
+    title: 'Pages',
+    links: [
+     
       {
-        name: 'editor',
-        icon: <FiEdit />,
+        name: 'employees',
+        icon: <IoMdContacts />,
       },
+     
+      {
+        name: 'projects',
+        icon: <AiFillProject />
+      }
+    ],
+  },
+  {
+    title: 'Apps',
+    links: [
+      {
+        name: 'calendar',
+        icon: <AiOutlineCalendar />,
+      },
+      
+     
+    ],
+  },
+  
+];
+export const linkIntern = [
+  {
+    title: 'Dashboard',
+    links: [
+      {
+        name: 'profile',
+        icon: <FiShoppingBag />,
+      },
+    ],
+  },
+
+ 
+  {
+    title: 'Apps',
+    links: [
+      {
+        name: 'calendar',
+        icon: <AiOutlineCalendar />,
+      },
+      
      
     ],
   },
@@ -810,6 +867,29 @@ export const userProfileData = [
     iconBg: 'rgb(254, 201, 15)',
   },
 ];
+export const internGrid = [
+  { field: 'name',
+    headerText: 'Name',
+    width: '150',
+    textAlign: 'Center',
+  },
+  { field: 'email',
+    headerText: 'Email',
+    width: '150',
+    textAlign: 'Center',
+  },
+  { field: 'phone',
+    headerText: 'Phone',
+    width: '150',
+    textAlign: 'Center',
+  },
+  { field: 'address',
+    headerText: 'Address',
+    width: '150',
+    textAlign: 'Center',
+  },
+];
+
 
 export const leavesGrid = [
   // {
@@ -1519,6 +1599,17 @@ export const employeesData = [
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar2,
+  },
+];
+
+export const internData = [
+  {
+   
+    name: 'Nancy Davolio',
+    email: 'nancy.d@gmail.com',
+    phone: 'USA',
+    address: 'Boulder,CO',
+   
   },
 ];
 
